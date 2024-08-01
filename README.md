@@ -52,13 +52,15 @@ The second script, `ijclr_2024_experiments_1b-2x.pl`, runs all remaining
 experiments. The naming of the experiments in the script files correspond to the
 experiments listed in Table 2 as follows:
 
+```
 Experiment Script predicate     Table 2 row
-`experiment_1a`                 Experiment 1 Solver MaGe map (row 1)
-`experiment_1b`                 Experiment 1 Solver Lake map (row 2)
-`experiment_2a`                 Experiment 2 FSC-BT MaGe map (row 3)
-`experiment_2b`                 Experiment 2 FSC-RE MaGe map (row 4)
-`experiment_2c`                 Experiment 2 FSC-BT(S) MaGe map (row 5) 
-`experiment_2d`                 Experiment 2 FSC-RE(S) MaGe map (row 6) 
+experiment_1a                 Experiment 1 Solver MaGe map (row 1)
+experiment_1b                 Experiment 1 Solver Lake map (row 2)
+experiment_2a                 Experiment 2 FSC-BT MaGe map (row 3)
+experiment_2b                 Experiment 2 FSC-RE MaGe map (row 4)
+experiment_2c                 Experiment 2 FSC-BT(S) MaGe map (row 5) 
+experiment_2d                 Experiment 2 FSC-RE(S) MaGe map (row 6) 
+```
 
 In the following, we refer to experiments by their names in the Experiment
 script predicate colunn above.
