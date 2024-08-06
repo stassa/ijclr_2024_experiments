@@ -387,7 +387,7 @@ example_clauses(call).
 %	The Path and Module name of an experiment file.
 %
 %experiment_file('data/examples/hello_world.pl',hello_world).
-experiment_file('lib/grid_master/data/solvers/grid_solver.pl',grid_solver).
+experiment_file(lib/grid_master/data/solvers/grid_solver,grid_solver).
 
 
 %!      fetch_clauses(?Whence) is semidet.

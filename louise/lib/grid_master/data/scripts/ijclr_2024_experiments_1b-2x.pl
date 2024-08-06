@@ -1,10 +1,10 @@
-:- ensure_loaded(lib/controller_freak/controller_freak)
-   ,ensure_loaded(lib/grid_master/data/environments/basic_environment/maze_generator)
-   ,ensure_loaded(lib/grid_master/src/map_display)
-   ,ensure_loaded(lib/grid_master/src/action_generator)
-   ,ensure_loaded(lib/grid_master/src/map)
-   ,ensure_loaded(lib/controller_freak/executors)
-   ,ensure_loaded(lib/grid_master/data/environments/basic_environment/basic_environment)
+:- ensure_loaded(lib(controller_freak/controller_freak))
+   ,ensure_loaded(lib(grid_master/data/environments/basic_environment/maze_generator))
+   ,ensure_loaded(lib(grid_master/src/map_display))
+   ,ensure_loaded(lib(grid_master/src/action_generator))
+   ,ensure_loaded(lib(grid_master/src/map))
+   ,ensure_loaded(lib(controller_freak/executors))
+   ,ensure_loaded(lib(grid_master/data/environments/basic_environment/basic_environment))
    ,configuration:experiment_file(P,_M)
    ,ensure_loaded(P)
    ,ensure_loaded(test_scripts).
@@ -15,7 +15,7 @@
 % needs to be run once.
 %:-action_generator:write_primitives.
 
-:- use_module(lib/grid_master/grid_master_configuration)
+:- use_module(lib(grid_master/grid_master_configuration))
   ,retract(grid_master_configuration:action_representation(_))
   ,assert(grid_master_configuration:action_representation(controller_sequences)).
 

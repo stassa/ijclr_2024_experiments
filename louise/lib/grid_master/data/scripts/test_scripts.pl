@@ -1,10 +1,10 @@
-:- ensure_loaded(lib/controller_freak/controller_freak)
-   ,ensure_loaded(lib/grid_master/data/environments/basic_environment/maze_generator)
-   ,ensure_loaded(lib/grid_master/src/map_display)
-   ,ensure_loaded(lib/grid_master/src/action_generator)
-   ,ensure_loaded(lib/grid_master/src/map)
-   ,ensure_loaded(lib/controller_freak/executors)
-   ,ensure_loaded(lib/grid_master/data/environments/basic_environment/basic_environment).
+:- ensure_loaded(lib(controller_freak/controller_freak))
+   ,ensure_loaded(lib(grid_master/data/environments/basic_environment/maze_generator))
+   ,ensure_loaded(lib(grid_master/src/map_display))
+   ,ensure_loaded(lib(grid_master/src/action_generator))
+   ,ensure_loaded(lib(grid_master/src/map))
+   ,ensure_loaded(lib(controller_freak/executors))
+   ,ensure_loaded(lib(grid_master/data/environments/basic_environment/basic_environment)).
 
 /*
 :-edit(test_scripts).
