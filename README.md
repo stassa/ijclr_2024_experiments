@@ -226,3 +226,164 @@ Setting the above options as shown will allow experiments 1b to 2d to run with
 all 100 MaGe maps and all 500 lake maps ("dungeons" in the experiment script).
 
 As for experiment 1a, you should see a lot more output this time.
+
+
+Paper
+=====
+
+A draft of the paper submitted to IJCLR is included under the `paper/`
+directory, as a pdf file. The version of the paper in that directory includes
+corrections and supplements not included in the submitted version.
+
+
+Additional test scripts
+=======================
+
+You can further test the capabilities of Grid Mater and Controller Freak, the
+two systems described in the IJCLR submission, by running the test script in the
+following path:
+
+```
+ijclr_2024_experiments/louise/lib/grid_master/data/scripts/test_scripts.pl
+```
+
+Where `ijclr_2024_experiments` is the top-level directory where you cloned this
+repository.
+
+The scripts in `test_scripts.pl` are grouped by the method of display: either by
+printing out results in the SWI-Prolog IDE once processing is finished, or by
+printing results in real-time, using the Python library
+[blessed](https://pypi.org/project/blessed/), via SWI-Prolog's built-in Janus
+interface.
+
+Look for the comments in `test_script.pl` preceding each group of scripts to
+find out which display method is used by that group, and the purpose of the
+scripts in the group. 
+
+For example the first group of scripts in `test_script.pl` is preceded by the
+following comment block:
+
+```
+/* ================================================================================
+ * Seek a target already marked on a map.
+ * Display with blessed.
+================================================================================ */
+```
+
+Installing blessed
+------------------
+
+You need the `blessed` teminal manipulation Python package to run those scripts
+in `test_scripts.pl` that display their results using, well, `blessed`.
+
+Note that you don't need `blessed` unless you want to run the scripts that use
+it.
+
+You can install `blessed` according to the project's [online
+instructions](https://pypi.org/project/blessed/). This basically amounts to
+calling the pip Python package manager as follows:
+
+```
+pip install blessed
+```
+
+Once blessed is installed, the test scripts that use it should be run in a
+terminal _not in the SWI-Prolog IDE_. 
+
+If you try to run the blessed scripts in the SWI-Prolog IDE you sould expect to
+see an error like the following:
+
+```
+?- seek_mage_20.
+ERROR: Python 'AttributeError':
+ERROR:   'NoneType' object has no attribute 'fileno'
+ERROR: Python stack:
+ERROR:   File "C:\Users\me\AppData\Roaming\Python\Python310\site-packages\blessed\terminal.py", line 164, in __init__
+ERROR:     self.__init__streams()
+ERROR:   File "C:\Users\me\AppData\Roaming\Python\Python310\site-packages\blessed\terminal.py", line 253, in __init__streams
+ERROR:     self._init_descriptor = sys.__stdout__.fileno()
+ERROR: 
+ERROR: In:
+ERROR:   [18] janus:py_call(blessed:'Terminal'(),_47066,[python_object(true)])
+ERROR:   [17] basic_environment:environment_init(map(mageid,20-20,c(f,f,f,f,f,w,f,f,f,f,f,f,f,w,w,f,'<skipped 383 of 400>',f)),blessed,20-20,_47190-s,q0,pupu,_47196-e) at c:/users/me/documents/prolog/ilp_systems/ijclr_2024_experiments/louise/lib/grid_master/data/environments/basic_environment/basic_environment.pl:121
+ERROR:   [14] search_map_terminal(id(mageid),blessed,20-20,s,e,tiles) at c:/users/me/documents/prolog/ilp_systems/ijclr_2024_experiments/louise/lib/grid_master/data/scripts/test_scripts.pl:724
+ERROR:   [11] toplevel_call('<garbage_collected>') at c:/program files/swipl/boot/toplevel.pl:1318
+ERROR: 
+ERROR: Note: some frames are missing due to last-call optimization.
+ERROR: Re-run your program in debug mode (:- debug.) to get more detail.
+   Exception: (14) search_map_terminal(id(mageid), blessed, 20-20, s, e, tiles) ? creep
+^  Exception: (4) setup_call_cleanup('$toplevel':notrace(call_repl_loop_hook(begin, 0)), '$toplevel':'$query_loop'(0), '$toplevel':notrace(call_repl_loop_hook(end, 0))) ? creep
+```
+
+Running the test scripts
+------------------------
+
+To run the test scripts, consult the test scripts file as follows, at the
+SWI-Prolog top-level:
+
+```
+% cd to <repository_root>/louise/
+
+% Start SWI-Prolog .e.g 
+% > swipl
+
+ensure_loaded(lib/grid_master/data/scripts/test_scripts).
+```
+
+Then find the nanme of the script you wish to run in `test_scripts.pl` and run
+it by calling its name. Top-level script predicates take no arguments.
+
+For example, to run a "seek" script on the "big room" map included with Grid
+Master and display the results in the SWI-Prolog IDE at the end of processing,
+you would enter the following query (and see the results illustrated in the
+image below):
+
+![Seeking the end tile in the Big Room map](images/seek_big_room.png)
+
+
+Or, to run the seek script as above but in a MaGe-generated maze, you would run
+the following:
+
+![Seeking the end tile in a MaGe map](images/seek_mage_20x20.png)
+
+
+Configuring test scripts
+------------------------
+
+The test scripts in `test_script.pl` showcase various capabilities of the Grid
+Master and Controller Freak libraries and so can be run with different
+configurations of those systems.
+
+Look at the auxiliary predicates in `test_script.pl` to get an idea of what the
+test scripts do. See also the note near the top about different types of
+"mission".
+
+To configure Grid Master to run mission scripts with different settings, edit
+the Grid Master configuration file in the following location:
+
+```
+ijclr_2024_experiments/louise/lib/grid_master/grid_master_configuration.pl
+```
+
+To configure Controller Freak for the same purppose, edit its configuration file
+in the following location:
+
+```
+ijclr_2024_experiments/louise/lib/controller_freak/controller_freak_configuration.pl
+```
+
+For some of the test scripts you may need to edit both configuration files. 
+
+
+Test scripts - disclaimer
+-------------------------
+
+Test scripts are not described in the IJCLR submission. They were used in the
+development of the Grid Master and Controller Freak libraries and some of the
+experiments in the IJCLR submission are based on them. The scripts are included
+in this repository to satisify reviewers' (and other viewers') curiosity about
+the project and its capabilities. Users are invited to experiment and "play
+around" with the test scripts to find out how to use the two libraries.
+
+Please contact the corresponding author (owner of this repository) if you have
+trouble running the scripts.
