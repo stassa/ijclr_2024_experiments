@@ -1,6 +1,8 @@
 IJCLR 2024 Experiments 
 =======================
 
+![Planning with a solver, acting with a controller](images/solver_controller.png)
+
 Install SWI-Prolog
 ------------------
 
