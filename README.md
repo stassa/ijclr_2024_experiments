@@ -3,7 +3,7 @@ IJCLR 2024 Experiments
 
 ![Planning with a solver, acting with a controller](images/solver_controller.png)
 
-Planning with a model-based solver; acting with a model-free contrller.
+Planning with a model-based solver; acting with a model-free controller.
 
 Install SWI-Prolog
 ------------------
