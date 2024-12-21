@@ -1,14 +1,15 @@
 IJCLR 2024 Experiments 
 =======================
-[Stand by for GIF loading...]
+
+Exploring a "dungeon" map and building a map with grid-based SLAM. (Stand by for
+GIF loading...)
 
 ![Exploring a "dungeon" map](images/dungeons_cropped.gif)
 
-Exploring a "dungeon" map and building a map with grid-based SLAM.
+Planning with a model-based solver; acting with a model-free controller.
 
 ![Planning with a solver, acting with a controller](images/solver_controller.png)
 
-Planning with a model-based solver; acting with a model-free controller.
 
 Install SWI-Prolog
 ------------------
