@@ -4,7 +4,7 @@ IJCLR 2024 Experiments
 
 ![Exploring a "dungeon" map](images/dungeons_cropped.gif)
 
-Exploring a "dungeon" map.
+Exploring a "dungeon" map and building a map with grid-based SLAM.
 
 ![Planning with a solver, acting with a controller](images/solver_controller.png)
 
