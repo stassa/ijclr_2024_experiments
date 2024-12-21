@@ -1,8 +1,8 @@
 IJCLR 2024 Experiments 
 =======================
 
-Exploring a "dungeon" map and building a map with grid-based SLAM. (Stand by for
-GIF loading...)
+Exploring a "lake with islands" and building a map with grid-based SLAM. (Stand
+by for GIF loading...)
 
 ![Exploring a "dungeon" map](images/dungeons_cropped.gif)
 
