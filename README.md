@@ -1,6 +1,10 @@
 IJCLR 2024 Experiments 
 =======================
 
+![Exploring a "dungeon" map](images/dungeons_cropped.gif)
+
+Exploring a "dungeon" map.
+
 ![Planning with a solver, acting with a controller](images/solver_controller.png)
 
 Planning with a model-based solver; acting with a model-free controller.
