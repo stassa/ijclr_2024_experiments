@@ -10,6 +10,15 @@ Planning with a model-based solver; acting with a model-free controller.
 
 ![Planning with a solver, acting with a controller](images/solver_controller.png)
 
+What is this?
+-------------
+
+This is the repository with the code, experiments and paper (camera-ready
+version) for the paper "From Model-Based Learning to Model-Free Behaviour with
+Meta-Interpretive Learning", published in IJCLR 2024. 
+
+The paper can be found under the `paper/` directory.
+
 
 Install SWI-Prolog
 ------------------
