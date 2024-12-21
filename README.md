@@ -1,5 +1,6 @@
 IJCLR 2024 Experiments 
 =======================
+[Stand by for GIF loading...]
 
 ![Exploring a "dungeon" map](images/dungeons_cropped.gif)
 
